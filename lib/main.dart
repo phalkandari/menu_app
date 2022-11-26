@@ -10,17 +10,6 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
-  List<Food> foods = [
-    Food(
-        name: "Pizza",
-        image: "assets/pizza.jpg",
-        description: "a dish of Italian origin"),
-    Food(name: "Burger", image: "assets/burger.jpg"),
-    Food(name: "Pasta", image: "assets/pasta.jpg"),
-    Food(name: "Sushi", image: "assets/suchi.jpg"),
-    Food(name: "Biryani", image: "assets/biryani.jpg"),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -34,7 +23,7 @@ class MyApp extends StatelessWidget {
           title: Text("Menu"),
         ),
         body: ListView(
-          children: foods.map((food) => FoodCard(food: food)).toList(),
+          children: Food.foods.map((food) => FoodCard(food: food)).toList(),
         ),
       ),
     );
